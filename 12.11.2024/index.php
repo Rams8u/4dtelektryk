@@ -25,15 +25,27 @@
             <input type='submit' name='sub' value='Dodaj'/>
         </form>
         <form class="car" method="POST" action="zapisz.php"><br>
-            <input type="text" name="marka" placeholder="marka"><br>
-            <input type="text" name="kolor" placeholder="kolor"><br>
+            <select name="marka"><br>
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="mazda">Mazda</option>
+                <option value="fiat">Fiat</option>
+            </select><br>
+            <select name="kolor">
+                <option value="zielony">Zielony</option>
+                <option value="czerwony">Czerwony</option>
+                <option value="niebieski">Niebieski</option>
+            </select><br>
             <input type="text" name="nr_rej" placeholder="nr_rej"><br>
             <input type="text" name="przebieg" placeholder="przebieg"><br>
             <input type="text" name="cena_pln" placeholder="cena_pln"><br>
             <input type="text" name="cena_eu" placeholder="cena_eu"><br>
             <input type="text" name="rok_prod" placeholder="rok_prod"><br>
             <input type="text" name="pojemnosc" placeholder="pojemnosc"><br>
-            <input type="text" name="paliwo" placeholder="paliwo"><br>
+            <select name="paliwo">
+                <option value="diesel">Diesel</option>
+                <option value="benzyna">Benzyna</option>
+            </select><br>
             <input type='submit' name='sub2' value='Dodaj'/><br>
         </form>
     </div>
