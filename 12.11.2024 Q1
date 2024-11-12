@@ -6,3 +6,7 @@
 6.SELECT auto.*, umowa.kupujacy_id, umowa.sprzedajacy_id, umowa.komis_id from auto LEFT JOIN umowa on auto.id=umowa.auto_id where auto.marka='mazda' is not null; 
 7.SELECT auto.*, umowa.kupujacy_id, umowa.sprzedajacy_id, umowa.komis_id from auto LEFT JOIN umowa on auto.id=umowa.auto_id where umowa.kupujacy_id IS NULL; 
 8.SELECT auto.*, umowa.kupujacy_id, umowa.sprzedajacy_id, umowa.komis_id from auto LEFT JOIN umowa on auto.id=umowa.auto_id where umowa.sprzedajacy_id IS NULL; 
+SELECT osoba.i , osoba.n, auto.kolor, auto.marka from osoba left join umowa on umowa.kupujacy_id=osoba.id LEFT join auto on umowa.auto_id=auto.id where umowa.kupujacy_id is not null; 
+SELECT osoba.i , osoba.n, auto.kolor, auto.marka from osoba left join umowa on umowa.sprzedajacy_id=osoba.id LEFT join auto on umowa.auto_id=auto.id where umowa.sprzedajacy_id is not null; 
+SELECT AUTO.* , osoba.i, osoba.n FROM auto left JOIN umowa on umowa.auto_id=auto.id left JOIN osoba on umowa.kupujacy_id=osoba.id; 
+SELECT AUto.* , osoba.i, osoba.n FROM auto left JOIN umowa on umowa.auto_id=auto.id left JOIN osoba on umowa.sprzedajacy_id=osoba.id; 
