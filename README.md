@@ -1,1 +1,1 @@
-łaskawie prosmi o nie rozpowszechnianie plikow istniejacych w repetytorium<3
+łaskawie prosmi o nie rozpowszechnianie plikow istniejacych w repozytorium<3
