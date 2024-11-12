@@ -1,0 +1,4 @@
+1.SELECT auto.marka, auto.kolor, komis.miasto FROM auto left JOIN umowa on auto.id=umowa.auto_id LEFT JOIN komis on umowa.komis_id=komis.id; 
+2.select o1.imie as buyer, o2.imie as seler, auto.marka, auto.kolor from umowa join osoba o1 on umowa.kupujacy_id= o1.id join osoba o2 on umowa.sprzedajacy_id=o2.id join auto on umowa.auto_id=auto.id; 
+3.SELECT auto.marka, auto.kolor, komis.miasto from auto INNER join umowa on auto.id=umowa.auto_id inner JOIN komis on umowa.auto_id=komis.id; 
+4.SELECT osoba.imie, osoba.nazwisko, auto.kolor, auto.marka from osoba inner join umowa on osoba.id=umowa.kupujacy_id inner join auto on umowa.auto_id=auto.id; 
