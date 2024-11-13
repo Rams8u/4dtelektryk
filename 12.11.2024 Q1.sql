@@ -25,3 +25,6 @@
 25. SELECT COUNT(umowa.id), komis.miasto FROM `umowa` LEFT JOIN komis on komis.id=umowa.komis_id group by komis.miasto
 26. SELECT auto.*, komis.miasto FROM `umowa` LEFT JOIN komis on komis.id=umowa.komis_id LEFT JOIN auto on auto.id=umowa.auto_id where auto.cena_pln in ((SELECT cena_pln from auto order by cena_pln DESC)) group by komis.miasto
 27. 
+28. SELECT osoba.i, osoba.n, auto.* FROM `umowa` LEFT JOIN auto on auto.id=umowa.auto_id LEFT JOIN osoba on osoba.id=umowa.sprzedajacy_id where auto.cena_pln>20000
+29. SELECT DISTINCT auto.kolor, komis.miasto FROM `umowa` LEFT JOIN auto on auto.id=umowa.auto_id LEFT JOIN komis on komis.id=umowa.komis_id where komis.miasto='poznan'
+30. 
