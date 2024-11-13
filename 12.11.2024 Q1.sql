@@ -15,3 +15,4 @@
 15. SELECT auto.*, komis.miasto FROM `umowa` LEFT JOIN auto on auto.id=umowa.auto_id LEFT JOIN komis on komis.id=umowa.komis_id WHERE auto.marka='BMW'
 16. SELECT count(umowa.kupujacy_id) AS liczba_kupionych, osoba.i, osoba.n FROM `umowa` LEFT JOIN osoba on osoba.id=umowa.kupujacy_id GROUP BY osoba.i, osoba.n
 17. SELECT count(umowa.komis_id) AS liczba_sprzedanych, komis.miasto FROM `umowa` LEFT JOIN komis on komis.id=umowa.komis_id GROUP BY komis.miasto
+!! 18. SELECT DISTINCT komis.miasto, umowa.id FROM `umowa` LEFT JOIN komis on komis.id=umowa.komis_id ORDER BY umowa.id DESC;
