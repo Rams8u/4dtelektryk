@@ -17,3 +17,4 @@
 17. SELECT count(umowa.komis_id) AS liczba_sprzedanych, komis.miasto FROM `umowa` LEFT JOIN komis on komis.id=umowa.komis_id GROUP BY komis.miasto
 !! 18. SELECT DISTINCT komis.miasto, umowa.id FROM `umowa` LEFT JOIN komis on komis.id=umowa.komis_id ORDER BY umowa.id DESC;
 19. SELECT auto.*, osoba.i, osoba.n FROM `umowa` LEFT JOIN auto on auto.id=umowa.auto_id LEFT JOIN osoba on osoba.id=umowa.kupujacy_id where auto.paliwo='diesel'
+20. 
