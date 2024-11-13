@@ -10,3 +10,4 @@ SELECT osoba.i , osoba.n, auto.kolor, auto.marka from osoba left join umowa on u
 SELECT osoba.i , osoba.n, auto.kolor, auto.marka from osoba left join umowa on umowa.sprzedajacy_id=osoba.id LEFT join auto on umowa.auto_id=auto.id where umowa.sprzedajacy_id is not null; 
 SELECT AUTO.* , osoba.i, osoba.n FROM auto left JOIN umowa on umowa.auto_id=auto.id left JOIN osoba on umowa.kupujacy_id=osoba.id; 
 SELECT AUto.* , osoba.i, osoba.n FROM auto left JOIN umowa on umowa.auto_id=auto.id left JOIN osoba on umowa.sprzedajacy_id=osoba.id; 
+13. SELECT DISTINCT miasto FROM komis LEFT JOIN umowa ON komis.id=umowa.komis_id
