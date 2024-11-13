@@ -19,8 +19,6 @@
 19. SELECT auto.*, osoba.i, osoba.n FROM `umowa` LEFT JOIN auto on auto.id=umowa.auto_id LEFT JOIN osoba on osoba.id=umowa.kupujacy_id where auto.paliwo='diesel'
 20. SELECT auto.*, osoba.i, osoba.n FROM `umowa` LEFT JOIN auto on auto.id=umowa.auto_id LEFT JOIN osoba on osoba.id=umowa.sprzedajacy_id where auto.paliwo='benzyna'
 21. SELECT auto.*, osoba.i, osoba.n, osoba.data_ur FROM `umowa` LEFT JOIN auto on auto.id=umowa.auto_id LEFT JOIN osoba on osoba.id=umowa.kupujacy_id order by osoba.data_ur
-22.
-23.
-24.
-25.
-26. 
+22. SELECT auto.* FROM `umowa` LEFT JOIN auto on auto.id=umowa.auto_id LEFT JOIN komis on komis.id=umowa.komis_id where komis.miasto!='warszawa'
+23. SELECT osoba.i, osoba.n FROM `umowa` LEFT JOIN osoba on osoba.id=umowa.sprzedajacy_id LEFT JOIN komis on komis.id=umowa.komis_id where komis.miasto='opole'
+24. 
