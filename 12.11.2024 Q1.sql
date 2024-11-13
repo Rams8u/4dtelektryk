@@ -23,4 +23,5 @@
 23. SELECT osoba.i, osoba.n FROM `umowa` LEFT JOIN osoba on osoba.id=umowa.sprzedajacy_id LEFT JOIN komis on komis.id=umowa.komis_id where komis.miasto='opole'
 24. SELECT avg(auto.przebieg), osoba.i, osoba.n FROM `umowa` LEFT JOIN osoba on osoba.id=umowa.sprzedajacy_id LEFT JOIN auto on auto.id=umowa.auto_id group by osoba.i, osoba.n
 25. SELECT COUNT(umowa.id), komis.miasto FROM `umowa` LEFT JOIN komis on komis.id=umowa.komis_id group by komis.miasto
-26. 
+26. SELECT auto.*, komis.miasto FROM `umowa` LEFT JOIN komis on komis.id=umowa.komis_id LEFT JOIN auto on auto.id=umowa.auto_id where auto.cena_pln in ((SELECT cena_pln from auto order by cena_pln DESC)) group by komis.miasto
+27. 
